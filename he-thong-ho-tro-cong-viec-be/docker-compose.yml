@@ -1,0 +1,16 @@
+services:
+  ecosystem_tool_be:
+    container_name: ecosystem_tool_be
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '8000:8080'
+
+volumes:
+  postgres-data_db:
+  redis-data_db:
+
+networks:
+  my_network:
+    driver: bridge
